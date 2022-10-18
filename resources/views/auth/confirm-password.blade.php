@@ -1,7 +1,19 @@
 <x-guest-layout>
     <x-jet-authentication-card>
+        <main class="login-form">
+
+            <div class="cotainer">
+          
+                <div class="row justify-content-center">
+          
+                    <div class="col-md-4">
+          
+                        <div class="card">
+          
+                            <div class="card-header">Confirm Password</div>
+          
+                            <div class="card-body">
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -19,10 +31,22 @@
             </div>
 
             <div class="flex justify-end mt-4">
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4 btn-primary">
                     {{ __('Confirm') }}
                 </x-jet-button>
             </div>
-        </form>
+        </form> 
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
     </x-jet-authentication-card>
 </x-guest-layout>
