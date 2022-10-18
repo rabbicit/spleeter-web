@@ -220,22 +220,26 @@ Commom elements
 Header section
  ---------------------*/
 
-.header-section {
+ .header-section {
 	padding-left: 55px;
 	padding-right: 72px;
 	background: #08192d;
+	display: flex;
+	justify-content: space-between;
 }
 
 .site-logo {
 	display: inline-block;
 	padding: 0;
 	padding: 44px 15px;
+	order: 1;
 }
 
 .header-right {
 	float: right;
 	padding: 44px 0;
-	margin-left: 130px;
+	margin-left: 0;
+	order: 3;
 }
 
 .header-right .hr-btn {
@@ -263,12 +267,14 @@ Header section
 	display: inline-block;
 	padding-left: 9px;
 }
-
 .main-menu {
 	list-style: none;
 	float: right;
+	order: 2;
 }
-
+.header-section.clearfix::after {
+	display: none;
+}
 .main-menu li {
 	display: inline-block;
 	position: relative;

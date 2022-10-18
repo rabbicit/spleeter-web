@@ -45,7 +45,7 @@
 			<div class="user-panel">
                 @guest
 				<a href="{{ route('login') }}" class="login">Login</a>
-				<a href="{{ route('register-user') }}" class="register">Create an account</a>
+				<a href="{{ route('register') }}" class="register">Create an account</a>
                 @else
 				<a href="{{ route('signout') }}" class="register">Logout</a>
                 @endguest

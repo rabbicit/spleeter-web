@@ -1,5 +1,18 @@
 <x-guest-layout>
     <x-jet-authentication-card>
+        <main class="login-form">
+
+            <div class="cotainer">
+          
+                <div class="row justify-content-center">
+          
+                    <div class="col-md-4">
+          
+                        <div class="card">
+          
+                            <div class="card-header">Verify Email</div>
+          
+                            <div class="card-body">
         <x-slot name="logo">
             {{-- <x-jet-authentication-card-logo /> --}}
         </x-slot>
@@ -19,7 +32,7 @@
                 @csrf
 
                 <div>
-                    <x-jet-button type="submit">
+                    <x-jet-button type="submit btn-primary">
                         {{ __('Resend Verification Email') }}
                     </x-jet-button>
                 </div>
@@ -35,11 +48,23 @@
                 <form method="POST" action="{{ route('logout') }}" class="inline">
                     @csrf
 
-                    <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 ml-2">
+                    <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 ml-2 btn-primary">
                         {{ __('Log Out') }}
                     </button>
                 </form>
             </div>
-        </div>
+        </div> 
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
     </x-jet-authentication-card>
 </x-guest-layout>
