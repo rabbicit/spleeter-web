@@ -33,4 +33,7 @@ class PageController extends Controller
     public function freeStems(){
         return view('pages.stems');
     }
+    public function aboutPage(){
+        return view('pages.about');
+    }
 }

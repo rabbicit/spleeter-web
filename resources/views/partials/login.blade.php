@@ -71,7 +71,8 @@
 </div>
 @section('scripts')
 @parent
-
+@if(Route::is('register') )
+@else
 @if($errors->has('email') || $errors->has('password'))
     <script>
     $(function() {
@@ -80,5 +81,6 @@
         });
     });
     </script>
+@endif
 @endif
 @endsection

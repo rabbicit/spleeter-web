@@ -48,7 +48,10 @@
 				data-target="#loginModal" class="login">Login</a>
 				<a href="{{ route('register') }}" class="register">Create an account</a>
                 @else
-				<a href="{{ route('signout') }}" class="register">Logout</a>
+				<a  href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="register">Logout</a>
+				<form action="{{route('logout')}}" method="POST" id="logout-form">
+					@csrf
+				</form>
                 @endguest
 			</div> 
 		</div>
@@ -56,9 +59,9 @@
 			<li class="active"><a href="{{ route('index') }}">Home</a></li>
 			<li><a href="#">Spit Songs</a></li>
 			<li><a href="{{route('freestems')}}">Free Stems</a></li>
-			<li><a href="#">Blog</a></li>
+			<li><a href="{{url('blog')}}">Blog</a></li>
 			<li><a href="{{route('contact')}}">Contact us</a></li>
-			<li><a href="#">About</a></li>
+			<li><a href="{{route('about')}}">About</a></li>
 		</ul>
 	</header>
 	<!-- Header section end -->
@@ -123,6 +126,7 @@
         <!-- Footer section end -->
     
 
+        @include('partials.login')
         <!--====== Javascripts & Jquery ======-->
         <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('front/js/jquery.slicknav.min.js') }}"></script>
@@ -140,5 +144,6 @@
         <script src="{{ asset('front/js/WaveSurferInit.js') }}"></script>
         <script src="{{ asset('front/js/jplayerInit.js') }}"></script>
         @livewireScripts
+        @yield('scripts')
         </body>
     </html>
