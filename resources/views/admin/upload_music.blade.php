@@ -42,7 +42,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="bpm">Bpm (Beats per minute)</label>
+                                <label for="bpm">Bpm (Beats per minute) </label>
                                 <input type="text" class="form-control" id="bpm" name="bpm" placeholder="Bpm (Beats per minute)">
                                 @error('bpm')
                                     <div class="error" style="color: red;">{{ $message }}</div>
