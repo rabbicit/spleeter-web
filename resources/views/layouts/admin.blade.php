@@ -77,9 +77,8 @@
                             </a>
                             <div class="collapse" id="ui-basic">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Upload music</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/dropdowns.html">View music</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{route('music.upload')}}">Upload music</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{route('music')}}">View music</a></li>
                                 </ul>
                             </div>
                         </li>

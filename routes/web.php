@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminMusicController;
 use App\Http\Controllers\AjaxSpleeterController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -51,6 +52,9 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::post('/admin/blog/update/{id}', [BlogController::class, 'updateBlog'])->name('updateblog');
     Route::post('/admin/blog/delete/{id}', [BlogController::class, 'deletePost'])->name('deleteblog');
     Route::get('/admin/settings', [AdminDashboardController::class, 'adminSettings'])->name('settings');
+    Route::get('/admin/music/upload', [AdminMusicController::class, 'uploadMusicForm'])->name('music.upload');
+    Route::post('/admin/music/abb', [AdminMusicController::class, 'addnewMusic'])->name('music.add');
+    Route::get('/admin/music/all', [AdminMusicController::class, 'viewMusic'])->name('music');
 
     
 });
